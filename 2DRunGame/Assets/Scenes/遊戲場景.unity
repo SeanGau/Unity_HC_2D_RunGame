@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 64747024}
   - component: {fileID: 64747023}
   m_Layer: 0
-  m_Name: Run (1)
+  m_Name: cat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
