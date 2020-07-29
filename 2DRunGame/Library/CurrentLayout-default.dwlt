@@ -43,8 +43,8 @@ MonoBehaviour:
     y: 384
     width: 792
     height: 378
-  m_MinSize: {x: 201, y: 221}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -71,10 +71,10 @@ MonoBehaviour:
     y: 0
     width: 792
     height: 762
-  m_MinSize: {x: 201, y: 342}
-  m_MaxSize: {x: 4001, y: 8042}
+  m_MinSize: {x: 201, y: 421}
+  m_MaxSize: {x: 4001, y: 8021}
   vertical: 1
-  controlID: 138
+  controlID: 55
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,10 +143,10 @@ MonoBehaviour:
     y: 30
     width: 1424
     height: 762
-  m_MinSize: {x: 708, y: 471}
-  m_MaxSize: {x: 18003, y: 14021}
+  m_MinSize: {x: 709, y: 471}
+  m_MaxSize: {x: 18004, y: 14021}
   vertical: 0
-  controlID: 61
+  controlID: 18
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: SceneView
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -187,15 +187,15 @@ MonoBehaviour:
     y: 0
     width: 792
     height: 384
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
   - {fileID: 13}
   - {fileID: 14}
-  m_Selected: 1
-  m_LastSelected: 2
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,7 +220,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 471}
   m_MaxSize: {x: 10002, y: 14021}
   vertical: 1
-  controlID: 62
+  controlID: 19
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -240,8 +240,8 @@ MonoBehaviour:
     y: 0
     width: 345
     height: 762
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -354,15 +354,32 @@ MonoBehaviour:
   m_ViewTransforms:
     m_KeySerializationHelper:
     - {fileID: 6474273544906117747, guid: 374c60c673aec40488a1e91916a96964, type: 2}
+    - {fileID: -9213470958324735816, guid: e833c9559a106af4ca753c187b771c1e, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.58103305
+    - e00: 0.59342104
       e01: 0
       e02: 0
-      e03: -2.231598
+      e03: -11.539459
       e10: 0
-      e11: 0.58103305
+      e11: 0.59342104
       e12: 0
-      e13: 115.223
+      e13: 117.49344
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
       e20: 0
       e21: 0
       e22: 1
@@ -466,20 +483,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/anim
+    - Assets/script
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/anim
+  - Assets/script
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\appedu\Desktop\Unity_HC_2D_RunGame\2DRunGame
+  m_LastProjectPath: E:\SeanGau\Unity_HC_2D_RunGame\2DRunGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f6360000
-    m_LastClickedID: 14070
-    m_ExpandedIDs: 00000000da360000dc360000de360000e0360000e2360000e4360000e6360000e8360000ea360000ec360000ee360000f036000000ca9a3b
+    m_SelectedIDs: 1a370000
+    m_LastClickedID: 14106
+    m_ExpandedIDs: 00000000e8360000ea360000ec360000ee360000f0360000f2360000f4360000f6360000f8360000fa360000fc360000fe36000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -507,7 +524,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000da360000dc360000de360000e0360000e2360000e4360000e6360000e8360000ea360000ec360000ee360000f0360000
+    m_ExpandedIDs: 00000000e8360000ea360000ec360000ee360000f0360000f2360000f4360000f6360000f8360000fa360000fc360000fe360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -551,7 +568,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 12}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -559,7 +576,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 300}
+    m_ScrollPosition: {x: 0, y: 34}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 115
@@ -691,9 +708,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -6.491022, y: -4.1175294, z: -0.39622575}
+    m_Target: {x: 1.8176317, y: -0.94228846, z: -6.2818627}
     speed: 2
-    m_Value: {x: -6.491022, y: -4.1175294, z: -0.39622575}
+    m_Value: {x: 1.8176317, y: -0.94228846, z: -6.2818627}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -743,9 +760,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.324896
+    m_Target: 3.356449
     speed: 2
-    m_Value: 2.324896
+    m_Value: 3.356449
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -799,20 +816,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 08340000
-      m_LastClickedID: 13320
-      m_ExpandedIDs: 4efbfffff4340000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 8282ffff9682ffff2c83ffff4efbffff8a34000008350000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: GameObject
-        m_OriginalName: GameObject
+        m_Name: Mace (1)
+        m_OriginalName: Mace (1)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -12562
+        m_UserData: -1220
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
