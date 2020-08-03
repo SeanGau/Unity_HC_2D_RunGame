@@ -167,7 +167,20 @@ public class CatControl : MonoBehaviour
         }
        end_scene.gameObject.SetActive(true);
     }
-
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "地板")
+        {
+            isTouchingGround = false;
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "地板")
+        {
+            isTouchingGround = true;
+        }
+    }
     void OnCollisionEnter2D(Collision2D collision)
     {        
         switch(collision.gameObject.tag)
