@@ -12,6 +12,8 @@ public class CatControl : MonoBehaviour
     public float deadHeight = -10f;
     [Tooltip("跳躍高度"), Range(0, 1000)]
     public int jumpHeight = 300;
+    [Tooltip("滑行時間(ms)"), Range(0, 3000)]
+    public float slideLength = 1000;
     [Tooltip("血量"), Range(0, 1000)]
     public float hp = 500;
     [Tooltip("血量衰減"), Range(0, 1)]
@@ -28,13 +30,14 @@ public class CatControl : MonoBehaviour
 
 
     [Header("音效")]
+    public AudioSource aud;
     public AudioClip hurtAudio;
     public AudioClip slideAudio;
     public AudioClip jumpAudio;
     public AudioClip getAudio;
 
     bool isTouchingGround = false;
-    bool isStop = false;
+    bool isStop = true;
     int coinGet;
     float hp_max;
     Image blood_osd;
@@ -56,6 +59,7 @@ public class CatControl : MonoBehaviour
         default_collider_size = _collider.size;
         hp_max = hp;
         blood_osd = uiObject.GetChild(2).gameObject.GetComponent<Image>();
+        StartCoroutine("Timer_ready");
     }
     
     void Update()
@@ -76,9 +80,27 @@ public class CatControl : MonoBehaviour
         }
     }
 
+    IEnumerator Timer_ready()
+    {
+        Text ready_counter = uiObject.GetChild(4).gameObject.GetComponent<Text>();
+        print("3");
+        ready_counter.text = "3";
+        yield return new WaitForSeconds(1);
+        print("2");
+        ready_counter.text = "2";
+        yield return new WaitForSeconds(1);
+        print("1");
+        ready_counter.text = "1";
+        yield return new WaitForSeconds(1);
+        ready_counter.text = "GO!";
+        yield return new WaitForSeconds(1);
+        Destroy(ready_counter);
+        isStop = false;
+    }
+
     IEnumerator Timer_slider()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(slideLength/1000);
         _animator.SetBool("isSliding", false);
     }
 
@@ -86,6 +108,7 @@ public class CatControl : MonoBehaviour
     {
         if (isTouchingGround && Input.GetKeyDown(KeyCode.LeftControl))
         {
+            aud.PlayOneShot(slideAudio);
             _animator.SetBool("isSliding", true);
             StartCoroutine("Timer_slider");
             _collider.offset = new Vector2(-0.1f, -1.4f);
@@ -103,6 +126,7 @@ public class CatControl : MonoBehaviour
     {
         if (isTouchingGround && Input.GetKeyDown(KeyCode.Space))
         {
+            aud.PlayOneShot(jumpAudio);
             isTouchingGround = false;
             _rigidbody.AddForce(transform.up * jumpHeight);
         }
@@ -153,17 +177,22 @@ public class CatControl : MonoBehaviour
                 break;
 
             case "金幣":
+                aud.PlayOneShot(getAudio);
                 coinGet++;
                 Destroy(collision.gameObject);
                 uiObject.GetChild(0).gameObject.GetComponent<Text>().text = "金幣數量：" + coinGet;
                 break;
 
             case "障礙":
+                aud.PlayOneShot(hurtAudio);
+                _animator.SetTrigger("trigHurt");
                 hp -= hurt;
                 Destroy(collision.gameObject);
                 break;
 
             case "大障礙":
+                aud.PlayOneShot(hurtAudio);
+                _animator.SetTrigger("trigHurt");
                 hp -= hurtBig;
                 Destroy(collision.gameObject);
                 break;
