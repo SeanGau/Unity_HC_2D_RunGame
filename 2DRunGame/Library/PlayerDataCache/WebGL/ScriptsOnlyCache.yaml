@@ -3,10 +3,9 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - CameraControl
     - CatControl
-    - GameControl
     - MaceControl
+    - SceneControl
     Unity.2D.Tilemap.Editor.dll:
-    - UnityEditor.Tilemaps.GridBrush
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
@@ -17,10 +16,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -33,6 +30,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Shadow
     - UnityEngine.UI.Text
   sceneClasses:
     "Assets/Scenes/\u904A\u6232\u5834\u666F.unity":
@@ -75,27 +73,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 580}
     - Class: 114
-      Script: {instanceID: 11168}
+      Script: {instanceID: 11160}
     - Class: 114
-      Script: {instanceID: 11340}
+      Script: {instanceID: 11332}
     - Class: 114
-      Script: {instanceID: 11380}
+      Script: {instanceID: 11372}
     - Class: 114
-      Script: {instanceID: 11794}
+      Script: {instanceID: 11786}
     - Class: 114
-      Script: {instanceID: 12016}
+      Script: {instanceID: 12008}
     - Class: 114
-      Script: {instanceID: 12170}
+      Script: {instanceID: 12046}
     - Class: 114
-      Script: {instanceID: 12210}
+      Script: {instanceID: 12164}
     - Class: 114
-      Script: {instanceID: 12720}
+      Script: {instanceID: 12204}
     - Class: 114
-      Script: {instanceID: 13102}
+      Script: {instanceID: 12714}
     - Class: 114
-      Script: {instanceID: 30842}
+      Script: {instanceID: 12998}
     - Class: 114
-      Script: {instanceID: 59668}
+      Script: {instanceID: 13098}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -125,6 +123,69 @@ ScriptsOnlyBuild:
     - Class: 483693784
       Script: {instanceID: 0}
     - Class: 1839735485
+      Script: {instanceID: 0}
+    "Assets/Scenes/\u9078\u55AE.unity":
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11160}
+    - Class: 114
+      Script: {instanceID: 11332}
+    - Class: 114
+      Script: {instanceID: 11372}
+    - Class: 114
+      Script: {instanceID: 11714}
+    - Class: 114
+      Script: {instanceID: 11786}
+    - Class: 114
+      Script: {instanceID: 12204}
+    - Class: 114
+      Script: {instanceID: 12714}
+    - Class: 114
+      Script: {instanceID: 12998}
+    - Class: 114
+      Script: {instanceID: 13098}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -333,7 +394,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 6efed63a2c7445eb98408fa2721b30a8
+      Hash: 1fb309339c31c6c72888629622d4626f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CatControl
@@ -343,6 +404,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 72345b1edf0d1f8d34f1ff68c959fa23
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MaceControl
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -484,6 +551,12 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SceneControl
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayModeRunnerCallback
@@ -565,19 +638,8 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GameControl
-  - hash:
-      serializedVersion: 2
-      Hash: 72345b1edf0d1f8d34f1ff68c959fa23
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MaceControl
   platform: 20
   scenePathNames:
+  - "Assets/Scenes/\u9078\u55AE.unity"
   - "Assets/Scenes/\u904A\u6232\u5834\u666F.unity"
   playerPath: E:/SeanGau/Unity_HC_2D_RunGame/Web
