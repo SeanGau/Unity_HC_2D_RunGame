@@ -445,12 +445,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07a09307bb6c76c44b6a1ef456d31464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movingSpeed: 1
+  movingSpeed: 5
   deadHeight: -10
   jumpHeight: 300
   slideLength: 1000
   hp: 500
-  hpDecreasing: 0.25
+  hpDecreasing: 15
   hurt: 20
   hurtBig: 50
   offset: {x: 0, y: -1.2, z: 0}
@@ -684,6 +684,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: "\u5927\u969C\u7919"
       objectReference: {fileID: 0}
+    - target: {fileID: 7072986640040905436, guid: e0efa2155c246d144bfaad20aac44e3b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7162057970078439373, guid: e0efa2155c246d144bfaad20aac44e3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -849,6 +854,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: "\u5927\u969C\u7919"
       objectReference: {fileID: 0}
+    - target: {fileID: 7072986640040905436, guid: e0efa2155c246d144bfaad20aac44e3b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7162057970078439373, guid: e0efa2155c246d144bfaad20aac44e3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -922,6 +932,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: "\u5927\u969C\u7919"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072986640040905436, guid: e0efa2155c246d144bfaad20aac44e3b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7162057970078439373, guid: e0efa2155c246d144bfaad20aac44e3b,
         type: 3}
@@ -7560,7 +7575,7 @@ GameObject:
   - component: {fileID: 790146779}
   - component: {fileID: 790146778}
   - component: {fileID: 790146777}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "\u61F8\u7A7A\u5730\u677F"
   m_TagString: "\u5730\u677F"
   m_Icon: {fileID: 0}
@@ -7619,7 +7634,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -10
+  m_SortingOrder: 10
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0.008593738, z: 0}
   m_MaxChunkCount: 16
@@ -9571,6 +9586,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: "\u5927\u969C\u7919"
       objectReference: {fileID: 0}
+    - target: {fileID: 7072986640040905436, guid: e0efa2155c246d144bfaad20aac44e3b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7162057970078439373, guid: e0efa2155c246d144bfaad20aac44e3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9998,6 +10018,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: "\u5927\u969C\u7919"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072986640040905436, guid: e0efa2155c246d144bfaad20aac44e3b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7162057970078439373, guid: e0efa2155c246d144bfaad20aac44e3b,
         type: 3}
@@ -10768,7 +10793,7 @@ GameObject:
   - component: {fileID: 1780934256}
   - component: {fileID: 1780934258}
   - component: {fileID: 1780934257}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: "\u5730\u677F"
   m_TagString: "\u5730\u677F"
   m_Icon: {fileID: 0}
@@ -12627,6 +12652,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: "\u5927\u969C\u7919"
       objectReference: {fileID: 0}
+    - target: {fileID: 7072986640040905436, guid: e0efa2155c246d144bfaad20aac44e3b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7162057970078439373, guid: e0efa2155c246d144bfaad20aac44e3b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12701,11 +12731,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: coin (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6147715396908799671, guid: 508b4a825b8d03746a42735ed5a3a33e,
-        type: 3}
-      propertyPath: m_TagString
-      value: "\u91D1\u5E63"
       objectReference: {fileID: 0}
     - target: {fileID: 6147715396908799674, guid: 508b4a825b8d03746a42735ed5a3a33e,
         type: 3}
@@ -13488,6 +13513,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: "\u5927\u969C\u7919"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7072986640040905436, guid: e0efa2155c246d144bfaad20aac44e3b,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7162057970078439373, guid: e0efa2155c246d144bfaad20aac44e3b,
         type: 3}

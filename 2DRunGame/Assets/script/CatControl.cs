@@ -7,7 +7,7 @@ public class CatControl : MonoBehaviour
 {
     #region 資料欄位
     [Tooltip("移動速度"), Range(0, 100)]
-    public float movingSpeed = 1f;
+    public float movingSpeed = 5f;
     [Tooltip("移動速度"), Range(0, 100)]
     public float deadHeight = -10f;
     [Tooltip("跳躍高度"), Range(0, 1000)]
@@ -16,8 +16,8 @@ public class CatControl : MonoBehaviour
     public float slideLength = 1000;
     [Tooltip("血量"), Range(0, 1000)]
     public float hp = 500;
-    [Tooltip("血量衰減"), Range(0, 1)]
-    public float hpDecreasing = 0.25f;
+    [Tooltip("血量衰減(每秒)"), Range(0, 50)]
+    public float hpDecreasing = 15;
     [Tooltip("障礙傷害"), Range(0, 100)]
     public float hurt = 20;
     [Tooltip("大障礙傷害"), Range(0, 100)]
@@ -69,6 +69,7 @@ public class CatControl : MonoBehaviour
             Dead();
             Jump();
             Slide();
+            Move();
         }
     }
 
@@ -76,7 +77,6 @@ public class CatControl : MonoBehaviour
     {
         if (!isStop)
         {
-            Move();
         }
     }
 
@@ -108,7 +108,7 @@ public class CatControl : MonoBehaviour
     {
         if (isTouchingGround && Input.GetKeyDown(KeyCode.LeftControl))
         {
-            aud.PlayOneShot(slideAudio);
+            aud.PlayOneShot(slideAudio, 0.3f);
             _animator.SetBool("isSliding", true);
             StartCoroutine("Timer_slider");
             _collider.offset = new Vector2(-0.1f, -1.4f);
@@ -124,9 +124,22 @@ public class CatControl : MonoBehaviour
 
     void Jump()
     {
+        RaycastHit2D raycastHit = Physics2D.Raycast(transform.position + new Vector3(-0.05f, -1.13f), -transform.up, 0.5f, 1 << 8);
+        
+        if (raycastHit)
+        {
+            print(raycastHit.collider.gameObject.tag);
+            //isTouchingGround = true;
+        }
+        else
+        {
+            print("NULL");
+            //isTouchingGround = false;
+        }
+
         if (isTouchingGround && Input.GetKeyDown(KeyCode.Space))
         {
-            aud.PlayOneShot(jumpAudio);
+            aud.PlayOneShot(jumpAudio, 0.3f);
             isTouchingGround = false;
             _rigidbody.AddForce(transform.up * jumpHeight);
         }
@@ -134,11 +147,12 @@ public class CatControl : MonoBehaviour
 
     void Move()
     {
-        hp -= hpDecreasing;
+        hp -= hpDecreasing * Time.deltaTime;
+
         blood_osd.fillAmount = hp / hp_max;
         _animator.SetBool("isMoving", true);
         _animator.SetBool("isJumping", !isTouchingGround);
-        transform.Translate(transform.right * movingSpeed / 10);
+        transform.Translate(transform.right * movingSpeed * Time.deltaTime);
     }
 
     void Dead()
@@ -167,20 +181,7 @@ public class CatControl : MonoBehaviour
         }
        end_scene.gameObject.SetActive(true);
     }
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "地板")
-        {
-            isTouchingGround = false;
-        }
-    }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "地板")
-        {
-            isTouchingGround = true;
-        }
-    }
+
     void OnCollisionEnter2D(Collision2D collision)
     {        
         switch(collision.gameObject.tag)
@@ -188,7 +189,13 @@ public class CatControl : MonoBehaviour
             case "地板":
                 isTouchingGround = true;
                 break;
+        }        
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
             case "金幣":
                 aud.PlayOneShot(getAudio);
                 coinGet++;
@@ -197,26 +204,28 @@ public class CatControl : MonoBehaviour
                 break;
 
             case "障礙":
-                aud.PlayOneShot(hurtAudio);
+                aud.PlayOneShot(hurtAudio, 0.3f);
                 _animator.SetTrigger("trigHurt");
                 hp -= hurt;
                 Destroy(collision.gameObject);
                 break;
 
             case "大障礙":
-                aud.PlayOneShot(hurtAudio);
+                aud.PlayOneShot(hurtAudio, 0.3f);
                 _animator.SetTrigger("trigHurt");
                 hp -= hurtBig;
                 Destroy(collision.gameObject);
                 break;
-        }        
+            case "傳送門":
+                Endgame(false);
+                break;
+
+        }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnDrawGizmos()
     {
-        if(collision.gameObject.tag == "傳送門")
-        {
-            Endgame(false);
-        }
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(transform.position + new Vector3(-0.05f, -1.13f), -transform.up * 0.5f);
     }
 }
