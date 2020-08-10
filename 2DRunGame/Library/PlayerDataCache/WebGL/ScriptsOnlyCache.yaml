@@ -6,9 +6,14 @@ ScriptsOnlyBuild:
     - MaceControl
     - SceneControl
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridBrushEditor
+    - UnityEditor.Tilemaps.GridPaintPaletteClipboard
+    - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
+    - UnityEditor.Tilemaps.PaintableSceneViewGrid
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -396,7 +401,7 @@ ScriptsOnlyBuild:
     className: ScrollRect
   - hash:
       serializedVersion: 2
-      Hash: 1fb309339c31c6c72888629622d4626f
+      Hash: 3240034ab8531bb1bae9083722bab277
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CatControl
@@ -408,7 +413,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 72345b1edf0d1f8d34f1ff68c959fa23
+      Hash: 4884f2a5f28c9929f2c04f59612287a6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MaceControl
@@ -552,7 +557,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: ccdcc4eda3d40fba5d70d9f99008b8d6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SceneControl

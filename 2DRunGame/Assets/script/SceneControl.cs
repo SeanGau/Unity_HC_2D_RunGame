@@ -1,8 +1,23 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public static class GlobalVars
+{
+    [Range(0,1)]
+    public static float musicVol = 0.8f;
+    [Range(0, 1)]
+    public static float effectVol = 0.5f;
+
+}
+
 public class SceneControl : MonoBehaviour
 {
+    public AudioSource bg_audio;
+
+    private void Start()
+    {
+        bg_audio.volume = GlobalVars.musicVol;
+    }
     /// <summary>
     /// 切換場景
     /// </summary>
